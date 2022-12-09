@@ -1,3 +1,14 @@
-variable "project_id" { default = "koverholt-dev" }
-variable "region" { default = "us-central1" }
-variable "zone" { default = "us-central1-a" }
+variable "project_id" {
+  default = "koverholt-dev"
+  type    = string
+}
+
+variable "region" {
+  default = "us-central1"
+  type    = string
+}
+
+variable "zone" {
+  default = "us-central1-a"
+  type    = string
+}
