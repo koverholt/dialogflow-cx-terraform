@@ -1,6 +1,27 @@
+resource "google_dialogflow_cx_page" "start_page" {
+  parent       = google_dialogflow_cx_agent.agent.start_flow
+  display_name = "Start 2"
+
+  transition_routes {
+    intent      = google_dialogflow_cx_intent.store_location.id
+    target_page = google_dialogflow_cx_page.store_location.id
+  }
+
+  transition_routes {
+    intent      = google_dialogflow_cx_intent.store_hours.id
+    target_page = google_dialogflow_cx_page.store_hours.id
+  }
+
+  transition_routes {
+    intent      = google_dialogflow_cx_intent.order_new.id
+    target_page = google_dialogflow_cx_page.new_order.id
+  }
+}
+
+# TODO: Can we edit the default start page instead of creating a new one?
 
 resource "google_dialogflow_cx_page" "store_location" {
-  parent       = google_dialogflow_cx_flow.default_start_flow.id
+  parent       = google_dialogflow_cx_agent.agent.start_flow
   display_name = "Store Location"
 
   entry_fulfillment {
@@ -17,7 +38,7 @@ resource "google_dialogflow_cx_page" "store_location" {
 }
 
 resource "google_dialogflow_cx_page" "store_hours" {
-  parent       = google_dialogflow_cx_flow.default_start_flow.id
+  parent       = google_dialogflow_cx_agent.agent.start_flow
   display_name = "Store Hours"
 
   entry_fulfillment {
@@ -34,7 +55,7 @@ resource "google_dialogflow_cx_page" "store_hours" {
 }
 
 resource "google_dialogflow_cx_page" "new_order" {
-  parent       = google_dialogflow_cx_flow.default_start_flow.id
+  parent       = google_dialogflow_cx_agent.agent.start_flow
   display_name = "New Order"
 
   form {
@@ -116,7 +137,7 @@ resource "google_dialogflow_cx_page" "new_order" {
 }
 
 resource "google_dialogflow_cx_page" "order_confirmation" {
-  parent       = google_dialogflow_cx_flow.default_start_flow.id
+  parent       = google_dialogflow_cx_agent.agent.start_flow
   display_name = "Order Confirmation"
 
   entry_fulfillment {
@@ -131,11 +152,9 @@ resource "google_dialogflow_cx_page" "order_confirmation" {
     }
   }
 
-  # transition_routes {
-  #   condition   = "true"
-  #   target_page = "projects/-/locations/-/agents/-/flows/00000000-0000-0000-0000-000000000000/pages/END_SESSION"
-  # }
-
-  # TODO: Fix this transition route to be managed rather than a static reference
+  transition_routes {
+    condition   = "true"
+    target_page = "${google_dialogflow_cx_agent.agent.start_flow}/pages/END_SESSION"
+  }
 
 }

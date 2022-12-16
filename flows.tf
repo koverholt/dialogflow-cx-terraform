@@ -22,22 +22,4 @@ resource "google_dialogflow_cx_flow" "default_start_flow" {
       }
     }
   }
-
-  # transition_routes {
-  #   intent      = google_dialogflow_cx_intent.store_location.id
-  #   target_page = google_dialogflow_cx_page.store_location.id
-  # }
-
-  # transition_routes {
-  #   intent      = google_dialogflow_cx_intent.store_hours.id
-  #   target_page = google_dialogflow_cx_page.store_hours.id
-  # }
-
-  # transition_routes {
-  #   intent      = google_dialogflow_cx_intent.order_new.id
-  #   target_page = google_dialogflow_cx_page.new_order.id
-  # }
-
-  # TODO: Fix these transition routes, avoid cyclic graph
-
 }
