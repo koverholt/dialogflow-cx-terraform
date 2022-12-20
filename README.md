@@ -5,6 +5,8 @@ Use Terraform to provision a Dialogflow CX agent in Google Cloud based on
 agent](https://cloud.google.com/dialogflow/cx/docs/quick/build-agent)
 quickstart.
 
+![Dialogflow CX Shirt Ordering Agent](images/store-order-agent.png)
+
 # Prerequisites
 
 * Register for a Google Cloud account (https://cloud.google.com/docs/get-started)
