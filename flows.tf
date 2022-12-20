@@ -1,4 +1,4 @@
-resource "null_resource" "update_default_start_flow" {
+resource "null_resource" "default_start_flow" {
   # Use a REST API call (instead of Terraform) to modify messages and routes in
   # the default start flow and since Dialogflow creates this default start flow
   # automatically
@@ -34,7 +34,7 @@ resource "null_resource" "update_default_start_flow" {
   }
 
   # Use triggers instead of environment variables so that they can be reused in
-  # the REST API call to create routes and in the destroy-time provisioner
+  # the provisioner to create routes as well as the destroy-time provisioner
   triggers = {
     PROJECT                = var.project_id
     LOCATION               = var.region
