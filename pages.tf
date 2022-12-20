@@ -1,25 +1,3 @@
-# resource "google_dialogflow_cx_page" "start_page" {
-#   parent       = google_dialogflow_cx_agent.agent.start_flow
-#   display_name = "Start 2"
-
-#   transition_routes {
-#     intent      = google_dialogflow_cx_intent.store_location.id
-#     target_page = google_dialogflow_cx_page.store_location.id
-#   }
-
-#   transition_routes {
-#     intent      = google_dialogflow_cx_intent.store_hours.id
-#     target_page = google_dialogflow_cx_page.store_hours.id
-#   }
-
-#   transition_routes {
-#     intent      = google_dialogflow_cx_intent.order_new.id
-#     target_page = google_dialogflow_cx_page.new_order.id
-#   }
-# }
-
-# TODO: Can we edit the default start page instead of creating a new one?
-
 resource "google_dialogflow_cx_page" "store_location" {
   parent       = google_dialogflow_cx_agent.agent.start_flow
   display_name = "Store Location"
