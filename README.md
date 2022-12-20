@@ -1,7 +1,5 @@
 # dialogflow-cx-terraform
 
-![Terraform Graph of Dialogflow CX Agent](images/order-agent-graph.png)
-
 Use Terraform to provision a Dialogflow CX agent in Google Cloud based on
 [Create a Dialogflow CX
 agent](https://cloud.google.com/dialogflow/cx/docs/quick/build-agent)
@@ -22,3 +20,5 @@ quickstart.
 1. Edit the values in `variables.tf`
 1. Run `terraform init`
 1. Run `terraform apply`
+
+![Terraform Graph of Dialogflow CX Agent](images/order-agent-graph.png)
