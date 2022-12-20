@@ -1,132 +1,132 @@
-resource "google_dialogflow_cx_intent" "default_welcome_intent" {
-  parent       = google_dialogflow_cx_agent.agent.id
-  display_name = "Default Welcome Intent 2"
-  priority     = 500000
+# resource "google_dialogflow_cx_intent" "default_welcome_intent" {
+#   parent       = google_dialogflow_cx_agent.agent.id
+#   display_name = "Default Welcome Intent 2"
+#   priority     = 500000
 
-# TODO: Can we edit the default welcome intent instead of creating a new one?
+# # TODO: Can we edit the default welcome intent instead of creating a new one?
 
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "just going to say hi"
-    }
-  }
+#   training_phrases {
+#     repeat_count = 1
+#     parts {
+#       text = "just going to say hi"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "heya"
-    }
-  }
+#   training_phrases {
+#     repeat_count = 1
+#     parts {
+#       text = "heya"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "hello hi"
-    }
-  }
+#   training_phrases {
+#     repeat_count = 1
+#     parts {
+#       text = "hello hi"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "howdy"
-    }
-  }
-  training_phrases {
-    repeat_count = 1
-    parts {
-      text = "hey there"
-    }
-  }
+#   training_phrases {
+#     repeat_count = 1
+#     parts {
+#       text = "howdy"
+#     }
+#   }
+#   training_phrases {
+#     repeat_count = 1
+#     parts {
+#       text = "hey there"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 2
+#   training_phrases {
+#     repeat_count = 2
 
-    parts {
-      text = "hi there"
-    }
-  }
+#     parts {
+#       text = "hi there"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
+#   training_phrases {
+#     repeat_count = 1
 
-    parts {
-      text = "greetings"
-    }
-  }
+#     parts {
+#       text = "greetings"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
+#   training_phrases {
+#     repeat_count = 1
 
-    parts {
-      text = "hey"
-    }
-  }
+#     parts {
+#       text = "hey"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
+#   training_phrases {
+#     repeat_count = 1
 
-    parts {
-      text = "long time no see"
-    }
-  }
+#     parts {
+#       text = "long time no see"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
+#   training_phrases {
+#     repeat_count = 1
 
-    parts {
-      text = "hello"
-    }
-  }
+#     parts {
+#       text = "hello"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
+#   training_phrases {
+#     repeat_count = 1
 
-    parts {
-      text = "lovely day isn't it"
-    }
-  }
+#     parts {
+#       text = "lovely day isn't it"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
+#   training_phrases {
+#     repeat_count = 1
 
-    parts {
-      text = "I greet you"
-    }
-  }
+#     parts {
+#       text = "I greet you"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
+#   training_phrases {
+#     repeat_count = 1
 
-    parts {
-      text = "hello again"
-    }
-  }
+#     parts {
+#       text = "hello again"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
+#   training_phrases {
+#     repeat_count = 1
 
-    parts {
-      text = "hi"
-    }
-  }
+#     parts {
+#       text = "hi"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
+#   training_phrases {
+#     repeat_count = 1
 
-    parts {
-      text = "hello there"
-    }
-  }
+#     parts {
+#       text = "hello there"
+#     }
+#   }
 
-  training_phrases {
-    repeat_count = 1
+#   training_phrases {
+#     repeat_count = 1
 
-    parts {
-      text = "a good day"
-    }
-  }
-}
+#     parts {
+#       text = "a good day"
+#     }
+#   }
+# }
 
 resource "google_dialogflow_cx_intent" "store_location" {
   parent       = google_dialogflow_cx_agent.agent.id
