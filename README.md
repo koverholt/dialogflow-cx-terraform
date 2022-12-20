@@ -7,6 +7,8 @@ quickstart.
 
 ![Dialogflow CX Shirt Ordering Agent](images/store-order-agent.png)
 
+![Terraform Graph of Dialogflow CX Agent](images/order-agent-graph.svg
+
 # Prerequisites
 
 * Register for a Google Cloud account (https://cloud.google.com/docs/get-started)
