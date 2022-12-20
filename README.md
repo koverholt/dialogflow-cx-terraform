@@ -10,6 +10,7 @@ quickstart.
 * Register for a Google Cloud account (https://cloud.google.com/docs/get-started)
 * Enable the Dialogflow API (https://cloud.google.com/dialogflow/cx/docs/quick/setup)
 * Install and initialize the Google Cloud `gcloud` CLI tool (https://cloud.google.com/sdk/docs/install)
+* Install Terraform (https://developer.hashicorp.com/terraform/downloads)
 
 # Usage
 
