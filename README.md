@@ -16,7 +16,7 @@ quickstart.
 
 # Usage
 
-1. Clone this repository and `cd` into it
+1. Clone this repository and `cd` into the `terraform/` directory
 1. Edit the values in `variables.tf`
 1. Run `terraform init`
 1. Run `terraform apply`
