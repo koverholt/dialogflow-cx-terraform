@@ -1,0 +1,19 @@
+name: terraform-lint
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+      branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  delivery:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@main
+    - name: Lint Terraform
+      uses: actionshub/terraform-lint@main
