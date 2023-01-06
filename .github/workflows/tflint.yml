@@ -31,4 +31,4 @@ jobs:
         run: tflint --init
 
       - name: Run TFLint
-        run: tflint -f compact
+        run: tflint -f compact terraform/
