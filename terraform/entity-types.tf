@@ -1,6 +1,6 @@
 resource "google_dialogflow_cx_entity_type" "size" {
   parent       = google_dialogflow_cx_agent.agent.id
-  display_name = "size"
+  display_name   = "size"
   kind         = "KIND_MAP"
 
   entities {
