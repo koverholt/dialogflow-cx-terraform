@@ -1,4 +1,6 @@
-# dialogflow-cx-terraform
+# Managing Dialogflow Agents with Terraform
+
+[![terraform-lint](https://github.com/koverholt/dialogflow-cx-terraform/actions/workflows/main.yml/badge.svg)](https://github.com/koverholt/dialogflow-cx-terraform/actions/workflows/main.yml)
 
 Use Terraform to provision a Dialogflow CX agent in Google Cloud based on
 [Create a Dialogflow CX
